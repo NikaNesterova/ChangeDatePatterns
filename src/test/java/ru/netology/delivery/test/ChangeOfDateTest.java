@@ -27,9 +27,9 @@ public class ChangeOfDateTest {
     @DisplayName("Should successful plan and replan meeting")
     void shouldSuccessfulPlanAndReplanMeeting() {
         DataGenerator.UserInfo validUser = DataGenerator.Registration.generateUser("ru");
-        int daysToAddForFirstMeeting = 4;
+        int daysToAddForFirstMeeting = 5;
         String firstMeetingDate = DataGenerator.generatorDate(daysToAddForFirstMeeting);
-        int daysToAddForSecondMeeting = 7;
+        int daysToAddForSecondMeeting = 8;
         String secondMeetingDate = DataGenerator.generatorDate(daysToAddForSecondMeeting);
         $("[data-test-id='city' ] input").setValue(validUser.getCity());
         $("[data-test-id='date'] input").sendKeys(Keys.chord(Keys.SHIFT, Keys.HOME, Keys.BACK_SPACE));
